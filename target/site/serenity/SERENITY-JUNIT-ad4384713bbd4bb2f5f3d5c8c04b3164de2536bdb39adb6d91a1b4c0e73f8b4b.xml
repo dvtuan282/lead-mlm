@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="2" name="com.thinhtientech.mlm.features.OfferStory" skipped="0" tests="2" time="10.18" timestamp="2024-12-03 10:14:37"><testcase classname="com.thinhtientech.mlm.features.OfferStory" name="Check_offer_lead_when_creating_lead_with_api(LeadModel)"><failure message="Expected condition failed: waiting for By.xpath: //button[@id='kt_login_signin_submit'] to be present (tried for 5 second(s) with 100 milliseconds interval)&#10;Build info: version: '4.23.1', revision: '656257d8e9'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException">Expected condition failed: waiting for By.xpath: //button[@id='kt_login_signin_submit'] to be present (tried for 5 second(s) with 100 milliseconds interval)
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: unknown</failure><system-err>Expected condition failed: waiting for By.xpath: //button[@id='kt_login_signin_submit'] to be present (tried for 5 second(s) with 100 milliseconds interval)
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: unknown&#13;
+com.thinhtientech.mlm.tasks.Login.lambda$asAdmin$0(Login.java:17)&#13;
+com.thinhtientech.mlm.features.BaseTestStory.login(BaseTestStory.java:33)&#13;
+</system-err></testcase></testsuite>

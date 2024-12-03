@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Demo Project using Serenity Screenplay and JUnit</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="c5d20cbd182eef9c7cd7cb56db5c7cd88122575f7ad71ef22efe3e7b15d43f54.html">Offer Story</a></span>
+                > <span class="truncate-60"><a
+                    href="420f3bfe4de29f23e83b25a96dc5acc191932afb555d9841cdb65b04afedd23e.html">Check </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-12-2024 15:59</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Offer Story </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5698da923f295f46ce5ab64ced2311fc60caa4e36b32112606d3adcfdce3f60b.html">30 To 60 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Check
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="5f7c080e2f09dde56aedf986ead2a164b964c84b44e88b23d9b522cb483b40b5.png" title=" Open the application" width="0"/>
+                <img src="5f7c080e2f09dde56aedf986ead2a164b964c84b44e88b23d9b522cb483b40b5.png" title=" tuan opens the Mlm login page" width="0"/>
+                <img src="5f7c080e2f09dde56aedf986ead2a164b964c84b44e88b23d9b522cb483b40b5.png" title=" Open the application (completed)" width="0"/>
+                <img src="4ecf3b3ab646639eaa05f54039196d62836c76a427bf72ceea435b2254bd64fe.png" title=" tuan login as admin" width="0"/>
+                <img src="4ecf3b3ab646639eaa05f54039196d62836c76a427bf72ceea435b2254bd64fe.png" title=" tuan enters 'tuanduongtester' into username field" width="0"/>
+                <img src="92bf8c271db33fdce6473e8189ed0d33a8bc8331d05a94efb1dda40ff102601a.png" title=" tuan enters 'tuanduongtester' into username field (completed)" width="0"/>
+                <img src="92bf8c271db33fdce6473e8189ed0d33a8bc8331d05a94efb1dda40ff102601a.png" title=" tuan enters '1qazXSW@2020' into password field" width="0"/>
+                <img src="7150cbb87644e875c94eb49fa872c9ffe0a8160011d1e23de1289558848074c3.png" title=" tuan enters '1qazXSW@2020' into password field (completed)" width="0"/>
+                <img src="7150cbb87644e875c94eb49fa872c9ffe0a8160011d1e23de1289558848074c3.png" title=" tuan clicks on login button" width="0"/>
+                <img src="dde4bbd1ebb2ee2f1356d4c8abd022ae5cc1758dab13fa699c80fcf7c8cb8414.png" title=" tuan clicks on login button (completed)" width="0"/>
+                <img src="2d3f5bad7a473cade12196f8bf16912d23c1bf17e299d8e4ccfb1beff4f58850.png" title=" tuan should see current username on navbar with text value that is equal to: &lt;&quot;tuanduongtester&quot;&gt;" width="0"/>
+                <img src="fb237ccd5c9f6e28762b4b6307a165dd87685f2beb055893cc9a2e11a4649ab4.png" title=" tuan should see current username on navbar with text value that is equal to: &lt;&quot;tuanduongtester&quot;&gt; (completed)" width="0"/>
+                <img src="fb237ccd5c9f6e28762b4b6307a165dd87685f2beb055893cc9a2e11a4649ab4.png" title=" tuan login as admin (completed)" width="0"/>
+                <img src="c21da9947f8de1bbe8e5768d1c227b3e4dad6f63b37f3b5789e98e99a69a2ac0.png" title=" tuan select item on navigation bar" width="0"/>
+                <img src="c21da9947f8de1bbe8e5768d1c227b3e4dad6f63b37f3b5789e98e99a69a2ac0.png" title=" tuan clicks on Quản l&yacute; ph&acirc;n phối item" width="0"/>
+                <img src="f3e399f11f6254530a98ddcc4424b5117c44c4c9bf0ca24a45f0f4421d11b44a.png" title=" tuan clicks on Quản l&yacute; lead item" width="0"/>
+                <img src="6e0c707e5bab8fc37278b54e95d441d7ebf4328ed1017393998ff2013efd6864.png" title=" tuan clicks on Quản l&yacute; lead item (completed)" width="0"/>
+                <img src="6e0c707e5bab8fc37278b54e95d441d7ebf4328ed1017393998ff2013efd6864.png" title=" tuan should see Quản l&yacute; lead page title with text value that is equal to: &lt;&quot;Quản l&yacute; lead&quot;&gt;" width="0"/>
+                <img src="96704710c023470bfa937caadf1095d532973673d0bcd0dcaf9b35c00df4f6fe.png" title=" tuan should see Quản l&yacute; lead page title with text value that is equal to: &lt;&quot;Quản l&yacute; lead&quot;&gt; (completed)" width="0"/>
+                <img src="96704710c023470bfa937caadf1095d532973673d0bcd0dcaf9b35c00df4f6fe.png" title=" tuan select item on navigation bar (completed)" width="0"/>
+                <img src="51156deb72e81d9798e06fce676b115170c646266d38774f098b57f173c914c4.png" title=" tuan import lead" width="0"/>
+                <img src="51156deb72e81d9798e06fce676b115170c646266d38774f098b57f173c914c4.png" title=" tuan clicks on settings button" width="0"/>
+                <img src="51156deb72e81d9798e06fce676b115170c646266d38774f098b57f173c914c4.png" title=" tuan clicks on Import lead button" width="0"/>
+                <img src="a2d0cbdcba4785077c59b3e09c971777bb25ae093938f89e38bf56f6a0243995.png" title=" tuan clicks on Import lead button (completed)" width="0"/>
+                <img src="a2d0cbdcba4785077c59b3e09c971777bb25ae093938f89e38bf56f6a0243995.png" title=" Upload file at C:\Users\tuandv\abc.xlsx to import field" width="0"/>
+                <img src="4e24b60380e9d8315a9f15a9e4b3ac55227083a09ce85286ac5003c9ff0933ab.png" title=" Upload file at C:\Users\tuandv\abc.xlsx to import field (completed)" width="0"/>
+                <img src="2cce4ced6fd579543dba44fc579e0da4bad7dec4a39de385acac968e0bbb071f.png" title=" tuan clicks on Import button" width="0"/>
+                <img src="c771c033ebf4e31db7d5d14980506da2f2fb165a7aca2ad05ce7b5f88cbd1792.png" title=" tuan clicks on Import button (completed)" width="0"/>
+                <img src="122d737c968a6aab4fc51a9b0c73d25dfeafbf90d74fa3fad2fee8220d7bfefe.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="a90c9e158563af2b1aa2a95e4671d6a236d89b23190f8faba435199f15c40b9c.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="a90c9e158563af2b1aa2a95e4671d6a236d89b23190f8faba435199f15c40b9c.png" title=" tuan import lead (completed)" width="0"/>
+                <img src="ddb95fe2510f816b14012126e8bf172adfa55651086537c2b2bf764c177e68fe.png" title=" tuan search lead by campaign" width="0"/>
+                <img src="ddb95fe2510f816b14012126e8bf172adfa55651086537c2b2bf764c177e68fe.png" title=" Tuan reload page" width="0"/>
+                <img src="ddb95fe2510f816b14012126e8bf172adfa55651086537c2b2bf764c177e68fe.png" title=" tuan clicks on campaign filter" width="0"/>
+                <img src="210281e8bcb2ae78f4837626fbd6c2d1a57b4bc47f73f3a2c1c3fda4923bcd5b.png" title=" tuan clicks on campaign filter (completed)" width="0"/>
+                <img src="210281e8bcb2ae78f4837626fbd6c2d1a57b4bc47f73f3a2c1c3fda4923bcd5b.png" title=" tuan clicks on AutoTestOffer button" width="0"/>
+                <img src="9aacfca1e72f3302efe25978738b57ecc275b5b03321bc01e0e0cae92ef9685c.png" title=" tuan clicks on AutoTestOffer button (completed)" width="0"/>
+                <img src="9aacfca1e72f3302efe25978738b57ecc275b5b03321bc01e0e0cae92ef9685c.png" title=" tuan search lead by campaign (completed)" width="0"/>
+                <img src="9f29ee37f95334538b7a6486a337f325de7a944d27868f23881d687055763a36.png" title=" tuan check offer lead" width="0"/>
+                <img src="9f29ee37f95334538b7a6486a337f325de7a944d27868f23881d687055763a36.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="9f29ee37f95334538b7a6486a337f325de7a944d27868f23881d687055763a36.png" title=" tuan should see offer success that is displayed" width="0"/>
+                <img src="4b5fa2c8f440154975e105da911c2cc9fe3245c84f19d00f4e85a03e7f1b776e.png" title=" tuan should see offer success that is displayed (completed)" width="0"/>
+                <img src="4b5fa2c8f440154975e105da911c2cc9fe3245c84f19d00f4e85a03e7f1b776e.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="0740f8947348a229d89950d5fe076c96e3affb8264f1a26988d5b35b26edb319.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="121b2753e297c93351f632a4ef97d5cff2208c2a9caeb1f9936a4453f6656b33.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="aa3e3398cb5cf9f561468953f55e5e6406612b29070ff5669f02e4aabdc340df.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="aa3e3398cb5cf9f561468953f55e5e6406612b29070ff5669f02e4aabdc340df.png" title=" tuan should see Test_15 that is displayed" width="0"/>
+                <img src="b49997f32f8648e984b0102d87b92dab2154466aedaf854fc695ecabd7a18ec9.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="5fc0abbe4de9a32cd0868e9835deb2aad5d5e0645d147154592231e5daa5190b.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="eae4aa5332ef07fe0eb22a07454b996d9fac3dc60cefe88f90be0347ecb66c2b.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="c8881fae4c5f00883f67331605c03273ef6b5ac7eb7636e577a49b8243beee73.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="c8881fae4c5f00883f67331605c03273ef6b5ac7eb7636e577a49b8243beee73.png" title=" tuan should see 0974863997 that is displayed" width="0"/>
+                <img src="b49997f32f8648e984b0102d87b92dab2154466aedaf854fc695ecabd7a18ec9.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="5fc0abbe4de9a32cd0868e9835deb2aad5d5e0645d147154592231e5daa5190b.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="eae4aa5332ef07fe0eb22a07454b996d9fac3dc60cefe88f90be0347ecb66c2b.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="45a0fdd1d98c8cd2c69f5b8a0d10fe4be0612f6a982c982526e5bd8b52f94663.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="45a0fdd1d98c8cd2c69f5b8a0d10fe4be0612f6a982c982526e5bd8b52f94663.png" title=" tuan should see VPBANK that is displayed" width="0"/>
+                <img src="b49997f32f8648e984b0102d87b92dab2154466aedaf854fc695ecabd7a18ec9.png" title=" tuan should see VPBANK that is displayed (completed)" width="0"/>
+                <img src="b49997f32f8648e984b0102d87b92dab2154466aedaf854fc695ecabd7a18ec9.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="b54dc9294abf1d60230ee5dbb7c154c72bc179cc83fa47abcbc36b409df77330.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="eae4aa5332ef07fe0eb22a07454b996d9fac3dc60cefe88f90be0347ecb66c2b.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="b9f4dd3f9badcf51fac2ae2a3d2a6972e52a25d863de7b4c5723fab088d33950.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="b9f4dd3f9badcf51fac2ae2a3d2a6972e52a25d863de7b4c5723fab088d33950.png" title=" tuan should see AutoTestOffer that is displayed" width="0"/>
+                <img src="1da2759f531ecce8f37fcf338e2aa081310de3c9ca0c0cf18abef16fe7cd96bd.png" title=" tuan should see AutoTestOffer that is displayed (completed)" width="0"/>
+                <img src="1da2759f531ecce8f37fcf338e2aa081310de3c9ca0c0cf18abef16fe7cd96bd.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="0740f8947348a229d89950d5fe076c96e3affb8264f1a26988d5b35b26edb319.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="eae4aa5332ef07fe0eb22a07454b996d9fac3dc60cefe88f90be0347ecb66c2b.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="1333c6c22b97cee59c6c71cff87a26c5206d46c12ecc12838df1c92a9dda2dd4.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="1333c6c22b97cee59c6c71cff87a26c5206d46c12ecc12838df1c92a9dda2dd4.png" title=" tuan should see offer success that is displayed" width="0"/>
+                <img src="b93184355d8ea32e9039b4a1edfe306325243d0a5e48fcaf5aeb3d4b190f00b3.png" title=" tuan should see offer success that is displayed (completed)" width="0"/>
+                <img src="b93184355d8ea32e9039b4a1edfe306325243d0a5e48fcaf5aeb3d4b190f00b3.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="308d4a6ad4a980c2130ab74441caa383845adab1acd9fd7a209612e976f7f6f0.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="eae4aa5332ef07fe0eb22a07454b996d9fac3dc60cefe88f90be0347ecb66c2b.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="937968ff4614b2e2bef277654a6c5f8d3b7e5d91f035e8cf564cacd206c0c2b2.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="937968ff4614b2e2bef277654a6c5f8d3b7e5d91f035e8cf564cacd206c0c2b2.png" title=" tuan should see Test_15 that is displayed" width="0"/>
+                <img src="11f60c4c8a8c23ee35996a791812651f7c6c4c063d50924e8928b979ca01f792.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="95ed650a3bc903a7fbc8c86aabf63544995340a7ca3a07b6f275d2e4753b5137.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="eae4aa5332ef07fe0eb22a07454b996d9fac3dc60cefe88f90be0347ecb66c2b.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="995b4d3aa425651eb410c0c4d9703b6e6784233c28f2dbb093488612a6f4f5fc.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="995b4d3aa425651eb410c0c4d9703b6e6784233c28f2dbb093488612a6f4f5fc.png" title=" tuan should see 0974863997 that is displayed" width="0"/>
+                <img src="e770824ca00b17d06d7b46316d616df1d6f1edab8ef08afaf8f80e6e8a3c8231.png" title=" tuan should see 0974863997 that is displayed (completed)" width="0"/>
+                <img src="e770824ca00b17d06d7b46316d616df1d6f1edab8ef08afaf8f80e6e8a3c8231.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="9872e5d33d7eeeebe3b6afdbb498714405af61a2bd7a7fb4212dede9304b6510.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="eae4aa5332ef07fe0eb22a07454b996d9fac3dc60cefe88f90be0347ecb66c2b.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="d8bb07c7128a4e203076c4dd777b7fe2e45fdf4342157faef20b616bc215dac7.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="d8bb07c7128a4e203076c4dd777b7fe2e45fdf4342157faef20b616bc215dac7.png" title=" tuan should see VPBANK that is displayed" width="0"/>
+                <img src="b41eea0c5b93cea53036a1b1f88eba88789fef416fbb639e793a80bd259c420f.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="6da76130c275f953c03d68c560fb13d5a9b922bdbc93a3b9a8e080e5a3feb0e1.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="6da76130c275f953c03d68c560fb13d5a9b922bdbc93a3b9a8e080e5a3feb0e1.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="7a105494a133917ec29c98715cc6ac81d51f9b66195fdd5426037eaf44e61ec6.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="7a105494a133917ec29c98715cc6ac81d51f9b66195fdd5426037eaf44e61ec6.png" title=" tuan should see AutoTestOffer that is displayed" width="0"/>
+                <img src="7a105494a133917ec29c98715cc6ac81d51f9b66195fdd5426037eaf44e61ec6.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="575a579685ec9ab8c86de2ccee14b4e5402c4c78a96a0639b2e6584365e4ac82.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="eae4aa5332ef07fe0eb22a07454b996d9fac3dc60cefe88f90be0347ecb66c2b.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="44d661e478e36993b8296f13c20e922676f4b494213ad38c743dbb4a2ad9493d.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="44d661e478e36993b8296f13c20e922676f4b494213ad38c743dbb4a2ad9493d.png" title=" tuan should see offer success that is displayed" width="0"/>
+                <img src="5245e2ef6f71b608bee3fdbb0d5088adbb530eeaf62158a8d7435fb54bc3d147.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="b54dc9294abf1d60230ee5dbb7c154c72bc179cc83fa47abcbc36b409df77330.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="eae4aa5332ef07fe0eb22a07454b996d9fac3dc60cefe88f90be0347ecb66c2b.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="5a71a889d723d1453f4f78460ea9a4d9bac14887fc824a3331a8f08b6affe1b6.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="5a71a889d723d1453f4f78460ea9a4d9bac14887fc824a3331a8f08b6affe1b6.png" title=" tuan should see Test_15 that is displayed" width="0"/>
+                <img src="5245e2ef6f71b608bee3fdbb0d5088adbb530eeaf62158a8d7435fb54bc3d147.png" title=" tuan should see Test_15 that is displayed (completed)" width="0"/>
+                <img src="5245e2ef6f71b608bee3fdbb0d5088adbb530eeaf62158a8d7435fb54bc3d147.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="a059f8090eba106852e0d2e1fbe38fa9beae8fb6364fa1ee12d1f2f709ea33c8.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="eae4aa5332ef07fe0eb22a07454b996d9fac3dc60cefe88f90be0347ecb66c2b.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="afa6fa28ec4a5ba1b780097de4246522f2009fe6e73f7fad5510c7a0c45940b5.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="afa6fa28ec4a5ba1b780097de4246522f2009fe6e73f7fad5510c7a0c45940b5.png" title=" tuan should see 0974863997 that is displayed" width="0"/>
+                <img src="5245e2ef6f71b608bee3fdbb0d5088adbb530eeaf62158a8d7435fb54bc3d147.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="b54dc9294abf1d60230ee5dbb7c154c72bc179cc83fa47abcbc36b409df77330.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="b54dc9294abf1d60230ee5dbb7c154c72bc179cc83fa47abcbc36b409df77330.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="1c730f3ed6e0dfec23b8be0ccac41846a329d16ebc0f4680eae0cb8ef6f9c368.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="1c730f3ed6e0dfec23b8be0ccac41846a329d16ebc0f4680eae0cb8ef6f9c368.png" title=" tuan should see VPBANK that is displayed" width="0"/>
+                <img src="97e9ea2e917b0863be2373543ffc556f4ab1354123f8306bc9992ae64b708000.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="95ed650a3bc903a7fbc8c86aabf63544995340a7ca3a07b6f275d2e4753b5137.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+                <img src="eae4aa5332ef07fe0eb22a07454b996d9fac3dc60cefe88f90be0347ecb66c2b.png" title=" tuan clicks on remove_red_eye button" width="0"/>
+                <img src="573b64cde10ffbbabee5dc307f897187ee5cde07e6dcb889849aa5398995240e.png" title=" tuan clicks on remove_red_eye button (completed)" width="0"/>
+                <img src="573b64cde10ffbbabee5dc307f897187ee5cde07e6dcb889849aa5398995240e.png" title=" tuan should see AutoTestOffer that is displayed" width="0"/>
+                <img src="a56b3e6b7b9f896d032f15dfbdd781156d85d29728bc8509fec46294fa13e367.png" title=" tuan should see AutoTestOffer that is displayed (completed)" width="0"/>
+                <img src="a56b3e6b7b9f896d032f15dfbdd781156d85d29728bc8509fec46294fa13e367.png" title=" tuan clicks on Đ&oacute;ng button" width="0"/>
+                <img src="f6f67deb51754f3cde59d3f1e7d74ac953c98c5b924ef69e96d97c278708bd2f.png" title=" tuan clicks on Đ&oacute;ng button (completed)" width="0"/>
+
+                <img src="f6f67deb51754f3cde59d3f1e7d74ac953c98c5b924ef69e96d97c278708bd2f.png" title=" tuan check offer lead (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.2.0</span>
+</div>
+</body>
+</html>

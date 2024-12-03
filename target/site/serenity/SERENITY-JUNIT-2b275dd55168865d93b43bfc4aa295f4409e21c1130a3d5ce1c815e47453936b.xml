@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="2" name="com.thinhtientech.mlm.features.OfferStory" skipped="0" tests="2" time="0.55" timestamp="2024-12-03 10:18:20"><testcase classname="com.thinhtientech.mlm.features.OfferStory" name="Check_offer_lead_when_creating_lead_with_api(LeadModel)"><failure message="Expected:  that is equal to: &lt;200&gt;&#10;Actual:   &lt;500&gt;" type="java.lang.AssertionError">Expected:  that is equal to: &lt;200&gt;
+Actual:   &lt;500&gt;</failure><system-err>Expected:  that is equal to: &lt;200&gt;
+Actual:   &lt;500&gt;&#13;
+com.thinhtientech.mlm.tasks.CreateLead.lambda$with$1(CreateLead.java:20)&#13;
+com.thinhtientech.mlm.features.OfferStory.Check_offer_lead_when_creating_lead_with_api(OfferStory.java:24)&#13;
+</system-err></testcase></testsuite>

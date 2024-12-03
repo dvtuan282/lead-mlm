@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="2" name="com.thinhtientech.mlm.features.OfferStory" skipped="0" tests="2" time="2.24" timestamp="2024-12-03 10:12:12"><testcase classname="com.thinhtientech.mlm.features.OfferStory" name="Check_offer_lead_when_creating_lead_with_api(LeadModel)"><failure message="&#13;&#10;Expected: an element that is visible&#13;&#10;     but: no matching element found by [current username on navbar located with: //span[text()='tuanduongtester']]" type="java.lang.AssertionError">&#13;
+Expected: an element that is visible&#13;
+     but: no matching element found by [current username on navbar located with: //span[text()='tuanduongtester']]</failure><system-err>&#13;
+Expected: an element that is visible&#13;
+     but: no matching element found by [current username on navbar located with: //span[text()='tuanduongtester']]&#13;
+com.thinhtientech.mlm.tasks.Login.lambda$asAdmin$0(Login.java:17)&#13;
+com.thinhtientech.mlm.features.BaseTestStory.login(BaseTestStory.java:33)&#13;
+</system-err></testcase></testsuite>
