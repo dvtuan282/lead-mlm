@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="com.thinhtientech.mlm.features.OfferStory" skipped="0" tests="1" time="21.3" timestamp="2024-12-03 02:45:27"><testcase classname="com.thinhtientech.mlm.features.OfferStory" name="Check_offer_lead_when_creating_lead_with_api(LeadModel)"/></testsuite>

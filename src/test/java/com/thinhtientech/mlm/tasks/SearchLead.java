@@ -19,7 +19,7 @@ public class SearchLead {
                         WaitUntil.the(LeadManagementPage.SPAN_BY_TEXT.of("Hiển thị bộ lọc nâng cao"), WebElementStateMatchers.isVisible()),
                         Click.on(LeadManagementPage.SPAN_BY_TEXT.of("Hiển thị bộ lọc nâng cao")),
                         SendKeys.of(id).into(LeadManagementPage.SEARCH_BY_FIELD.of("leadID")),
-                        Click.on(LeadManagementPage.SETTING_BUTTON.of("search"))
+                        Click.on(LeadManagementPage.SETTING_BUTTON.of("search", "1"))
                 ));
     }
 
